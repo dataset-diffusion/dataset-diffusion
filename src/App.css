@@ -111,16 +111,14 @@ a:link {
   text-align: center;
 }
 
-
-
-
-
 /*NAVBAR SECTION =======================================*/
 .social-link {
   /* text-align: center; */
   display: flex;
   list-style-type: none;
   justify-content: center;
+  gap: 20px;
+  padding-inline-start: 0px;
 }
 
 .social-link .social-content {
