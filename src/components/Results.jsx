@@ -113,6 +113,7 @@ const Results = () => {
                       showThumbs={false}
                       autoPlay={true}
                       interval={1000}
+                      infiniteLoop={true}
                       stopOnHover={true}>
                 {carousel.map(({ id, link, label }) => ( // Added 'id' to the carousel map function
                     <div key={id}> {/* Added key prop */}
