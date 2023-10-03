@@ -101,7 +101,7 @@ const Content = () => {
                                     showThumbs={false}
                                     autoPlay={true}
                                     infiniteLoop={true}
-                                    interval={500}
+                                    interval={3000}
                                     >
                                         {carousel.map(({ id, link, label }) => ( // Added 'id' to the carousel map function
                                             <div key={id}> {/* Added key prop */}

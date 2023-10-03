@@ -57,20 +57,20 @@ const NavBar = () => {
         {
             id: 2,
             name: "Truong Vu",
-            link: "https://github.com/quang-ngh",
+            link: "",
             affi: "1"
         },
 
         {
             id: 3,
             name: "Anh Tran",
-            link: "https://github.com/quang-ngh",
+            link: "https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en",
             affi: "1"
         },
         {
             id: 4,
             name: "Khoi Nguyen",
-            link: "https://github.com/quang-ngh",
+            link: "https://www.khoinguyen.org",
             affi: "1"
         },
     ];
