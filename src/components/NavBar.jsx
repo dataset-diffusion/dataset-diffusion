@@ -24,7 +24,7 @@ const NavBar = () => {
         {
             id: 1,
             title: "Github",
-            link: "https://arxiv.org/pdf/2309.14303.pdf",
+            link: "https://github.com/VinAIResearch/Dataset-Diffusion"
             icon: "fab fa-github"
         },
     ]
