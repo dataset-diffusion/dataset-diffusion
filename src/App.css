@@ -185,7 +185,7 @@ a:link {
   position: relative;
   list-style-type: none;
   margin: 0 1em;
-  font-size: 18px;
+  font-size: 22px;
   color: black;
 }
 
@@ -213,7 +213,7 @@ a:link {
 }
 
 .nav-authors #enterprise a {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 /*END NAVBAR SECTION =======================================*/
