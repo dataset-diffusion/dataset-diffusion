@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { Fragment } from 'react';
+import Latex from 'react-latex-next';
 
 const contentStyle = {
     height: '160px',
@@ -35,12 +36,13 @@ const Content = () => {
             prompt. In practice, we form a new text prompt that is the same as the class name, just for the purpose of extracting the cross-attention maps 
             while the original text prompt for generating images keeps unchanged. After this process, we will obtain the cross-attention respect to the class
             name.\n\n
-            Although the cross-attention maps already exhibit the location of the target classes in the image,
-            they are still coarse-grained and noisy. Thus, we propose to use the self-attention map 
+            Although the cross-attention maps $A_C$ already exhibit the location of the target classes in the image,
+            they are still coarse-grained and noisy. Thus, we propose to use the self-attention map $A_S$
             to enhance the cross-attention maps for a more precise object location. This is because the self-attention maps capturing the pairwise correlations among positions within
             the latent code can help propagate the initial cross-attention maps to the highly similar positions, e.g., non-salient parts of the object, 
             thereby enhancing their quality. Therefore, we propose self-attention exponentiation where the self-attention map  is powered to 
-            a hyper-parameter before multiplying to the cross-attention map.
+            a hyper-parameter $ \\tau$ before multiplying to the cross-attention map.
+            $$A^{*}_{C} = \\left(A_{S} \\right)^{\\tau} \\cdot A_{C}$$
             `,
             link: '/static/images/mask_generation.png',
             caption: `Given a text prompt “A bike is parked in a room; bicycle”, we obtain the generated image, 
@@ -79,7 +81,11 @@ const Content = () => {
                             <p key={id} className="content">
                                 {content.split('\n\n').map((item, key) => (
                                     <Fragment key={key}>
-                                        {item}
+                                        <Latex>
+
+                                            {item}
+                                        </Latex>
+                                        
                                         <br />
                                     </Fragment>
                                 ))}
